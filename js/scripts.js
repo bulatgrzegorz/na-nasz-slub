@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -85,37 +84,37 @@ $(document).ready(function () {
 
     /***************** Header BG Scroll ******************/
 
-    $(function () {
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
+    // $(function () {
+    //     $(window).scroll(function () {
+    //         var scroll = $(window).scrollTop();
 
-            if (scroll >= 20) {
-                $('section.navigation').addClass('fixed');
-                $('header').css({
-                    "border-bottom": "none",
-                    "padding": "35px 0"
-                });
-                $('header .member-actions').css({
-                    "top": "26px",
-                });
-                $('header .navicon').css({
-                    "top": "34px",
-                });
-            } else {
-                $('section.navigation').removeClass('fixed');
-                $('header').css({
-                    "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)",
-                    "padding": "50px 0"
-                });
-                $('header .member-actions').css({
-                    "top": "41px",
-                });
-                $('header .navicon').css({
-                    "top": "48px",
-                });
-            }
-        });
-    });
+    //         if (scroll >= 20) {
+    //             $('section.navigation').addClass('fixed');
+    //             $('header').css({
+    //                 "border-bottom": "none",
+    //                 "padding": "35px 0"
+    //             });
+    //             $('header .member-actions').css({
+    //                 "top": "26px",
+    //             });
+    //             $('header .navicon').css({
+    //                 "top": "34px",
+    //             });
+    //         } else {
+    //             $('section.navigation').removeClass('fixed');
+    //             $('header').css({
+    //                 "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)",
+    //                 "padding": "50px 0"
+    //             });
+    //             $('header .member-actions').css({
+    //                 "top": "41px",
+    //             });
+    //             $('header .navicon').css({
+    //                 "top": "48px",
+    //             });
+    //         }
+    //     });
+    // });
     /***************** Smooth Scrolling ******************/
 
     $(function () {
@@ -204,35 +203,95 @@ $(document).ready(function () {
         }
     });
 
+    var swiper = new Swiper('[unique-script-id="w-w-dm-id"] .mySwiper', {
+        loop: true,
+      
+        pagination: {
+          el: '[unique-script-id="w-w-dm-id"] .swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          100: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          500: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          769: {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+      
+      
+        }
+      });
+
     $('#add-to-cal').html(myCalendar);
 
-
     /********************** RSVP **********************/
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    console.log(urlParams)
+    console.log(urlParams["invite_code"])
+    if(urlParams.get("invite_code")){
+        console.log(urlParams.get("invite_code"))
+        $('#invite_code').val(urlParams.get("invite_code"));
+    }
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        var data = $(this).serialize();
+        
+        if (MD5($('#invite_code').val()) !== '5a1e3a5aede16d438c38862cac1a78db') {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Oj!</strong> Wpisz poprawny kod z zaproszenia.'));
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
+            return;
         }
+
+        var formData = {
+            email: $('input[name="email"]').val().trim(),
+            name: $('input[name="name"]').val().trim(),
+            accompanying: $('input[name="accompanying"]').val().trim(),
+            after_party: $('input[name="after_party"]').val().trim(),
+            sleep: $('input[name="sleep"]').val().trim(),
+            comments: $('textarea[name="comments"]').val().trim(),
+            invite_code: parseInt($('input[name="invite_code"]').val().trim(), 10)
+        };
+    
+        var jsonData = JSON.stringify(formData);
+        console.log(jsonData);
+
+        try{
+            $.ajax({
+                type: "POST",
+                url: "https://script.google.com/macros/s/AKfycbweH3xCDwuBUhvcqzBbVnDgi1DObJCjZ2YE75YQ1Kb54PcBFyyOo-oaYKaqC92H6kDR-Q/exec",
+                data: jsonData,
+                contentType: "text/plain",
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log("error!")
+                    // console.log(data);
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Oj!</strong> Chyba coś nie działa, spróbuj później lub zadzwoń do Grzesia 😥'));
+                },
+                success: function() {
+                    $('#rsvp-modal').modal('show');
+                }
+            });
+        }
+        catch (error){
+            // console.log(data);
+            console.log("catch");
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Oj!</strong> Chyba coś nie działa, spróbuj później lub zadzwoń do Grzesia 😥'));
+
+            return;
+        }
+
+        return;
+
     });
 
 });
@@ -253,9 +312,9 @@ function initMap() {
         map: map
     });
 }
-
+ 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = {lat: 22.5932759, lng: 88.27027720000001};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,

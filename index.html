@@ -23,7 +23,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-
+    <link href='https://fonts.googleapis.com/css?family=Vujahday Script' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap" rel="stylesheet">
     <script>
         // load css files from CDN if local node_modules fail
         function loadCssFromCDN(css) {
@@ -49,7 +51,230 @@
             }
         }
     </script>
+    <style>
+        #invitation #intro {
+            position: relative; /* Makes this section the positioning context */
+        }
 
+        .flower {
+            position: absolute;
+            width: 100px; /* Base size, adjust as needed */
+            height: auto;
+        }
+        .flower-top-right-1 {
+            top: -4%;    /* Distance from top */
+            left: 75%;   /* Distance from left */
+            transform: rotate(135deg); /* Rotate 15 degrees */
+        }
+        .flower-top-left-1 {
+            top: -4%;    /* Distance from top */
+            left: 15%;   /* Distance from left */
+            transform: rotate(-135deg) scaleX(-1); /* Mirror horizontally */
+        }
+
+        @media screen and (max-width: 1024px){
+            .flower {
+                width: 50px; /* Smaller on mobile */
+            }
+        }
+        .vujahday-font {
+            font-family: 'Vujahday Script';
+            font-size: 40px;
+        }
+        .date{
+            background-image:url(img/calendar.svg);
+            width: 34px; /* Set the width of the icon */
+            height: 34px; /* Set the height of the icon */
+            background-size: contain; /* Scales SVG to fit the div */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the icon in the div */
+            display: inline-block; /* Ensures it behaves like an inline element */
+        }
+        .rings{
+            background-image:url(img/rings.png);
+            width: 34px; /* Set the width of the icon */
+            height: 34px; /* Set the height of the icon */
+            background-size: contain; /* Scales SVG to fit the div */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the icon in the div */
+            display: inline-block; /* Ensures it behaves like an inline element */
+        }
+        .weeding{
+            background-image:url(img/party-popper.png);
+            width: 34px; /* Set the width of the icon */
+            height: 34px; /* Set the height of the icon */
+            background-size: contain; /* Scales SVG to fit the div */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the icon in the div */
+            display: inline-block; /* Ensures it behaves like an inline element */
+        }
+        .bed{
+            background-image:url(img/bed.png);
+            width: 34px; /* Set the width of the icon */
+            height: 34px; /* Set the height of the icon */
+            background-size: contain; /* Scales SVG to fit the div */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the icon in the div */
+            display: inline-block; /* Ensures it behaves like an inline element */
+        }
+        .poprawiny{
+            background-image:url(img/poprawiny.png);
+            width: 34px; /* Set the width of the icon */
+            height: 34px; /* Set the height of the icon */
+            background-size: contain; /* Scales SVG to fit the div */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the icon in the div */
+            display: inline-block; /* Ensures it behaves like an inline element */
+        }
+        .gift {
+        background-image: url(img/gift.png);
+        width: 34px;
+        height: 34px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        }
+        .icon-text {
+        display: flex;
+        align-items: center; /* Vertically centers children */
+        }
+        .side-by-side {
+            display: flex; /* Enables Flexbox, aligns children horizontally */
+            gap: 20px; /* Adds space between the divs */
+            justify-content: center;
+        }
+
+        .box {
+            width: 100px; /* Fixed width for demo; adjust as needed */
+            /* height: 100px; */
+            background-color: #ffffff; /* Wedding vibe color */
+            color: white;
+            text-align: center;
+            /* line-height: 100px; Vertically centers text */
+        }
+        div.vertical-line{
+            width: 1px; /* Line width */
+            background-color: black; /* Line color */
+            height: 100%; /* Override in-line if you want specific height. */
+            float: left; /* Causes the line to float to left of content. 
+                You can instead use position:absolute or display:inline-block
+                if this fits better with your design */
+        }
+        .date-stack {
+            display: flex;
+            flex-direction: column; /* Stacks children vertically */
+            align-items: center; /* Centers text horizontally */
+            text-align: center; /* Ensures text alignment */
+        }
+
+        .date-part {
+            line-height: 1; /* Removes extra spacing between lines */
+       }
+
+       .top {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+        }
+
+        .middle {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+        }
+
+        .bottom {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+        }
+        .time-display {
+            font-family: 'Karla', sans-serif;
+            font-size: 32px;
+        }
+        div.vertical-line{
+            width: 3px; /* Line width */
+            background-color: black; /* Line color */
+            height: 100%; /* Override in-line if you want specific height. */
+            float: left; /* Causes the line to float to left of content. 
+                You can instead use position:absolute or display:inline-block
+                if this fits better with your design */
+        }
+
+
+
+        .carousel .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.carousel * {
+  font-family: Nunito, sans-serif;
+}
+
+.carousel .responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.carousel .responsive-container-block.Container {
+  max-width: 1320px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  position: relative;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  padding-left: 10px;
+}
+
+.carousel .cardImg {
+  width: 100%;
+}
+
+.carousel .container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: block;
+}
+
+.carousel .swiper.mySwiper {
+  width: 100%;
+}
+
+.carousel .swiper-slide {
+  width: 100%;
+}
+
+.carousel .swiper-wrapper {
+  width: 100%;
+}
+
+.carousel .swiper-pagination.container-block {
+  top: auto;
+  bottom: 5px;
+  min-height: 20px;
+}
+    </style>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -58,6 +283,12 @@
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
@@ -113,89 +344,253 @@
 </section>
 
 <section id="invitation" class="section-padding">
+    <div class="container" style="padding: 50px 0 50px 0;">
+        <p class="vujahday-font">Ślub i wesele</p>
+    </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>We are getting hitched</h3>
-                <p>The dates are 27<sup>th</sup> & 28<sup>th</sup> of November '17 and we would like you to be a part of
-                    it.</p>
-                <div class="share-bar"></div>
+        <img src="img/flower1.png" class="flower flower-top-left-1" alt="Flower">
+        <div class="row " >
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="row" style="display: flex; align-items: center;">
+                    <div class="col-md-2 col-xs-2">
+                        <div class="date"></div>
+                    </div>
+                    
+                    <div class="col-md-3 col-xs-3">
+                        <div class="date-stack">
+                            <div class="date-part top">WRZESIEŃ</div>
+                            <div class="date-part middle">13</div>
+                            <div class="date-part bottom">2025</div>
+                          </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-xs-3">
+                        <div class="time-display">15:00</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 15px; margin-left: 5px;">
+                            <div class="col">
+                                    <div class="rings" style="margin-right: 5px;"></div>
+                                    <a href="https://mieszkoijagienka.eatbu.com/?lang=pl" style="font-size: 18px;">Mieszko i Jagienka Sulistrowiczki</a>
+                            </div>
+                        </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10077.005138652823!2d16.68985838293472!3d50.84503084672152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fca8d93cf1efd%3A0x1e5c47b34e3a349c!2sMieszko%20i%20Jagienka!5e0!3m2!1spl!2spl!4v1740601581430!5m2!1spl!2spl" width="auto" style="border:0; width: -webkit-fill-available;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
 </section>
 
 <section id="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">How we met</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
-            <div class="col-md-6">
-                <p>
-                    I first saw Antara in the Fall of 2008 when we started our undergrad. I was instantly attracted to
-                    her but was far too nervous to speak to her. I had told my friend I liked her and news had traveled
-                    fast and she soon found out. Her first reaction was "Who is Ram?" and she began searching for me in
-                    the class. She started to take notice of me and no matter how boring the lecture was, we never
-                    missed a class after that. After a good few months I finally plucked up the courage to ask her out
-                    and the rest is history :)
-                </p>
-            </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
-        </div>
+    <div class="container" style="padding: 50px 0 50px 0;">
+        <p class="vujahday-font" style="text-align: left;">Nasza historia</p>
     </div>
-</section>
-
-<section class="events section-padding" id="events">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="header">Events</h3>
+                <p>
+                    Poznaliśmy się windykując ludzi w firmie leasingowej 💰. Na jednej z firmowych imprez ośmieleni tequilą 🍸 na rachunek Grzegorza 😉 umówiliśmy się na wspólną podróż autostopem której celem była chorwacka <a href="https://autostoprace.pl/edycja-2017-wroclaw-fazana/">Fažana</a>. Podczas tej spontanicznej i pełnej przygód tułaczki, wykiełkowała miłość której dowód w postaci ślubu chcemy wspólnie z Wami świętować 🎇.
+                </p>
+                <p style="text-align: center">G.</p>
+            </div>
+        </div>
+        <div class="carousel" unique-script-id="w-w-dm-id">
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/efwcs4yb9hc3gknfcpz1">
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/z0p2jwzlgtoar9jn3nao">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/fkbpnsddvwzhpsp7n7sd">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/xsd5w6nvljxstlijooom">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/h9bra9umdbyva5yrk25k">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/qo5qgrpluv9mgti8iyh2">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/cfdttkel7prafb2gy4zl">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/rjlhhrjws7jd8pm1n1fd">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/osbpb60ptz5tssgj2td2">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/xcth68vmro1mebwrvj2w">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/ubstm8khtsvolnt0sf9q">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/ymwtece3wvnbith5g9ra">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/k51wrc1sxjrauvoacinv">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/u6m3e1hccl4ppdnhflav">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/v4o1mfkv1af9bcflnus1">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/fvmedujthjttg1hgucjd">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/kaeqnpqjjfhflsx11qca">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/qnmafyzkn4mvcay2uigc">
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/te2rewts8xpccf2wn4yp">
+                        </div>
+                      </div>   
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/v8zsospkx4wjf7nqjjkq">
+                        </div>
+                      </div>   
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/t_To43/slub/dqlltgff7qvzwvziaenr">
+                        </div>
+                      </div>   
+
+                  </div>
+                  <div class="swiper-pagination container-block">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</section>
+
+
+<section class="events section-padding" id="events">
+    <div class="container" style="padding: 50px 0 50px 0;">
+        <p class="vujahday-font" style="text-align: left;">Kilka spraw organizacyjnych</p>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <div class="icon-text">
+                        <div class="weeding" style="margin-right: 5px;"></div>
+                        <strong>Wesele</strong>
+                    </div>
+                    <p></p>
+                    <p>Zarówno ślub jak i wesele będzie odbywać się na zewnątrz (zabierzcie ciepłe rzeczy). 
+                        W przypadku złej pogody przeniesiemy imprezę weselną do sali - 
+                        będziemy informować o ostatecznej decyzji parę dni przed weselem</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <div class="icon-text">
+                        <div class="bed" style="margin-right: 5px;"></div>
+                        <strong>Nocleg</strong>
+                    </div>
+                    <p></p>
+                    <p>Zapewniamy nocleg na terenie wesela (pokoje 2/3/5 osobowe w budynku gównym lub domkach - nie spodziewajcie się hotelowych warunków). 
+                        Prośba o informację jeśli ktoś nie będzie chciał skorzystać z noclegu
+                    </p>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
-                    <p><strong>27th November</strong></p>
-
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>It's one of the oldest traditional Indian pre wedding ceremony where the bride and groom
-                        attend the event together and a professional mehndi artist applies
-                        mehndi to the bride's hands and feet. This will be having a celebratory
-                        festival feel to it with people wearing vibrant clothes and dancing, singing, playing
-                        games and a lot more.</p>
-                </div>
-                <div class="wp5">
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>This event is no way close to ethnic. The bride & groom would like to have some "shots before the
-                        knot". With booze flowing down the floor and the western attire on, everyone would be busy
-                        showing off their new moves on the stage which they have finely honed. Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>
+                    <div class="icon-text">
+                        <div class="poprawiny" style="margin-right: 5px;"></div>
+                        <strong>Poprawiny</strong>
+                    </div>
+                    <p></p>
+                    <p>Następnego dnia zapraszamy na poprawiny grillowe w godzinach 12:00 - 17:00 w tym samym miejscu. 
+                        Prosimy o potwierdzenie czy zostaniecie na poprawinach</p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
-                    <p><strong>28th November</strong></p>
-
-                    <h5>Haldi <span class="time">10AM-11AM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
-                </div>
-                <div class="wp6">
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>This is the main event in the entire wedding when the bride and the groom tie the
-                        knot. The groom comes with the barat and is greeted by the bride side with some dhol of course
-                        as maximum number of guests would be attending this event. This is when the couple circle the
-                        sacred fire and are finally declared husband and wife.</p>
+                    <div class="icon-text">
+                        <div class="gift" style="margin-right: 5px;"></div>
+                        <strong>Prezenty</strong>
+                    </div>
+                    <p></p>
+                    <p>Zamiast kwiatów w ramach drobnego prezentu prosimy o wpłaty na konto Fundacji CANCER FIGHTERS: 79 1240 6494 1111 0010 6532 9505</p>
                 </div>
             </div>
         </div>
@@ -258,94 +653,53 @@
 
 </section>
 
-<section id="instagram" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>A picture is worth a thousand words!</h3>
-                <p>Help us capture the moment, tag your photos with the hashtag
-                    <a href="https://instagram.com/explore/tags/ramandantara/" target="_blank">#RamAndAntara</a>
-                </p>
-            </div>
-        </div>
-        <div class="row section-border wp7">
-            <div class="col-md-4 col-md-offset-4">
-                <img src="img/iphone_instagram.jpg">
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="eng-pics" class="section-padding">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
+    <div class="container">
+        <div class="carousel" unique-script-id="w-w-dm-id">
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                      <div class="card">
+                        <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/ar_3:4,c_auto/slub/mieszko/my11awicqpehnmbzpqqb">
+                      </div>
                     </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
+
+                    <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/ar_3:4,c_auto/slub/mieszko/zifosdor77bljejqadsj">
                         </div>
-                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/ar_3:4,c_auto/slub/mieszko/rb9nxzuo3bblcfyznh6l">
                         </div>
-                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/ar_3:4,c_auto/slub/mieszko/uqz0qqwjgmskfdx2vzdv">
                         </div>
-                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card">
+                          <img class="cardImg" src="https://res.cloudinary.com/dljcybafb/image/upload/ar_3:4,c_auto/slub/mieszko/cvgsvmxukviqcdq9kz0v">
                         </div>
-                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
-                    </div>
-                </a>
+                      </div>
+
+                  </div>
+                  <div class="swiper-pagination container-block">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-        </div>
+          </div>
     </div>
+
     <div class="container">
         <div class="row hidden-lg hidden-md hidden-xs">
             <div class="col-xs-12 section-border section-padding"></div>
@@ -360,17 +714,7 @@
         </div>
     </div>-->
 </section>
-
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/9giqL1H6yRs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
-    </div>
-    <div id="video-content">
-        <h5>Kolkata</h5>
-        <p>City of joy</p>
-    </div>
-</section>
-
+<!-- 
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>How do I get there?</h3>
@@ -388,31 +732,33 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>ITC Fortune Park</h5>
-                            <p>Kona Expressway, Howrah, West Bengal 711403, India</p>
+                            <h5>Pensjonat Mieszko i Jagienka</h5>
+                            <p>Przełęcz Tąpadła 1, 58-111 Sulistrowiczki, Polska</p>
                         </div>
                         <div class="col-md-6">
-                            <h5>Mr. Amit Roy</h5>
+                            <h5>Panna młoda - Paulina</h5>
                             <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
-                                <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p>
+                            <h5>Pan młody - Grzegorz</h5>
+                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
+                            <h5>Świadkowa - Kama</h5>
+                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
+                            <h5>Świadek - Maciej</h5>
+                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
                         </div>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
-                        </div>
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10077.005138652823!2d16.68985838293472!3d50.84503084672152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fca8d93cf1efd%3A0x1e5c47b34e3a349c!2sMieszko%20i%20Jagienka!5e0!3m2!1spl!2spl!4v1740601581430!5m2!1spl!2spl" 
+                             height="500px"
+                             width="100%"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="rsvp text-center" id="rsvp">
 
@@ -423,35 +769,59 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+                        <h3>Dziękujemy!</h3>
+                        <p>Super, że będziecie z nami w naszym wielkim dniu!</p>
                     </div>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+    <div class="container" style="padding: 50px 0 50px 0;">
+        <p class="vujahday-font" style="text-align: left;">RSVP</p>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+            <div class="col-md-12">
+                <p><h4>Prosimy o potwierdzenie przybycia do dnia 1 lipca 2025</h4></p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-12">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
+                                                                     placeholder="Email"
                                                                      required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Imie i nazwisko"
+                                                                 required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
+                                <i class="fa fa-user-plus"></i><input name="accompanying" class=""
+                                                                 placeholder="Imię i nazwisko Partnera/Osoby Towarzyszącej">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-refresh"></i><input name="after_party" class=""
+                                                                 placeholder="Obecność na poprawinach (tak/nie)"
+                                                                 required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-bed"></i><input name="sleep" class=""
+                                                                 placeholder="Nocleg (tak/nie)"
                                                                  required>
                             </div>
                         </div>
@@ -459,18 +829,18 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                                                 class="" min="0"
-                                                                placeholder="Invite code"
+                                                                placeholder="Kod"
                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-comments"></i>
+                                <textarea name="comments" id="comments" class="" placeholder="Uwagi" rows="1"></textarea>
                             </div>
                         </div>
                     </div>
@@ -478,8 +848,7 @@
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
                     <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
+                        Potwierdzam!
                     </button>
                 </form>
             </div>
@@ -487,7 +856,7 @@
     </div>
 </section>
 
-<footer>
+<!-- <footer>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center content">
@@ -496,7 +865,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
@@ -505,8 +874,8 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+<!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script> -->
 <!-- Google Analytics -->
 <script>
     (function (i, s, o, g, r, a, m) {
