@@ -16,11 +16,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="Grzegorz i Paulina biorą ślub!">
     <meta property="og:description" content="Zapraszamy na nasz wielki dzień.">
-    <!-- <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg"> -->
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png"  href="favicon.png"> 
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <link href='https://fonts.googleapis.com/css?family=Vujahday Script' rel='stylesheet'>
@@ -57,14 +54,24 @@
         }
 
         .flower {
-            position: absolute;
+            position: relative;
             width: 100px; /* Base size, adjust as needed */
             height: auto;
         }
-        .flower-top-right-1 {
-            top: -4%;    /* Distance from top */
-            left: 75%;   /* Distance from left */
-            transform: rotate(135deg); /* Rotate 15 degrees */
+        .flower-1 {
+            transform: rotate(80deg); 
+        }
+        .flower-2 {
+            transform: rotate(90deg) scaleX(-1); 
+        }
+        .flower-3 {
+            transform: rotate(80deg) scaleX(-1); 
+        }
+        .flower-4 {
+            transform: rotate(270deg) scaleX(-1); 
+        }
+        .flower-5 {
+            transform: rotate(90deg); 
         }
         .flower-top-left-1 {
             top: -4%;    /* Distance from top */
@@ -74,7 +81,7 @@
 
         @media screen and (max-width: 1024px){
             .flower {
-                width: 50px; /* Smaller on mobile */
+                /*width: 50px; /* Smaller on mobile */
             }
         }
         .vujahday-font {
@@ -300,18 +307,18 @@
     <section class="navigation">
         <header>
             <div class="header-content">
-                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                <!-- <div class="logo"><a href="#"><img src="img/Paulina&Grzegorz.png" alt="Logo"></a></div> -->
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                            <li><a href="#invitation">Ślub</a></li>
+                            <li><a href="#intro">Nasza historia</a></li>
+                            <li><a href="#events">Sprawy organizacyjne</a></li>
+                            <!-- <li><a href="#eng-pics">Engagement</a></li> -->
+                            <!-- <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li> -->
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
+                            <!-- <li><a href="#map" class="login">Venue</a></li> -->
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
@@ -327,28 +334,28 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
                     <!--<h1>Ram and Antara</h1>-->
-                    <img src="img/logo-lg.png">
+                    <img src="img/Paulina&Grzegorz.png">
                     <!--<p class="intro">Ram & Antara are getting hitched!</p>-->
                     <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
                                                            class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
-        </div>
+        </div> -->
     </div>
     <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
 </section>
 
-<section id="invitation" class="section-padding">
+<section id="invitation" class="no-section-padding">
     <div class="container" style="padding: 50px 0 50px 0;">
         <p class="vujahday-font">Ślub i wesele</p>
     </div>
     <div class="container">
-        <img src="img/flower1.png" class="flower flower-top-left-1" alt="Flower">
+        <!-- <img src="img/flower1.png" class="flower flower-top-left-1" alt="Flower"> -->
         <div class="row " >
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="row" style="display: flex; align-items: center;">
@@ -380,6 +387,9 @@
             </div>
         </div>
     </div>
+    <div style="display: flex; justify-content: center;">
+        <img src="img/flower1.png" class="flower flower-1" alt="Flower">
+    </div>
 </section>
 
 <section id="intro">
@@ -390,9 +400,8 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    Poznaliśmy się windykując ludzi w firmie leasingowej 💰. Na jednej z firmowych imprez ośmieleni tequilą 🍸 na rachunek Grzegorza 😉 umówiliśmy się na wspólną podróż autostopem której celem była chorwacka <a href="https://autostoprace.pl/edycja-2017-wroclaw-fazana/">Fažana</a>. Podczas tej spontanicznej i pełnej przygód tułaczki, wykiełkowała miłość której dowód w postaci ślubu chcemy wspólnie z Wami świętować 🎇.
+                    Poznaliśmy się windykując ludzi w firmie leasingowej 💰. Na jednej z firmowych imprez ośmieleni tequilą 🍸 umówiliśmy się na wspólną podróż autostopem której celem była chorwacka <a href="https://autostoprace.pl/edycja-2017-wroclaw-fazana/">Fažana</a>. Podczas tej spontanicznej i pełnej przygód tułaczki, wykiełkowała miłość której dowód w postaci ślubu chcemy wspólnie z Wami świętować 🎇.
                 </p>
-                <p style="text-align: center">G.</p>
             </div>
         </div>
         <div class="carousel" unique-script-id="w-w-dm-id">
@@ -535,11 +544,13 @@
             </div>
           </div>
     </div>
-
+    <div style="display: flex; justify-content: center;">
+        <img src="img/flower2.png" style="width: 100px;" class="flower flower-2" alt="Flower">
+    </div>
 </section>
 
 
-<section class="events section-padding" id="events">
+<section class="events no-section-padding" id="events">
     <div class="container" style="padding: 50px 0 50px 0;">
         <p class="vujahday-font" style="text-align: left;">Kilka spraw organizacyjnych</p>
     </div>
@@ -595,16 +606,21 @@
             </div>
         </div>
         <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="col-md-3 col-md-offset-3 text-center">
                 <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dane kontaktowe
+                </a>
+            </div>
+            <div class="col-md-3  text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal-2">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Więcej szczegółów
                 </a>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
+
+        <div style="display: flex; justify-content: center;">
+            <img src="img/flower3.png" style="width: 100px;" class="flower flower-3" alt="Flower">
+        </div>
     </div>
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -613,7 +629,44 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
+
+                    <h3 class="text-center section-padding">Dane kontaktowe</h3>
+
+                    <p>
+                        <strong>Panna młoda - Paulina</strong>
+                        <br>
+                        <i class="fa fa-mobile"></i> <a href="tel://+48785625031">+48 785 625 031</a>
+                    </p>
+
+                    <p>
+                        <strong>Pan młody - Grzegorz</strong>
+                        <br>
+                        <i class="fa fa-mobile"></i> <a href="tel://+48505456199">+48 505 456 199</a>
+                    </p>
+
+                    <p>
+                        <strong>Świadkowa - Kama</strong>
+                        <br>
+                        <i class="fa fa-mobile"></i> <a href="tel://+48505998678">+48 505 998 678</a>
+                    </p>
+
+                    <p>
+                        <strong>Świadek - Maciej</strong>
+                        <br>
+                        <i class="fa fa-mobile"></i> <a href="tel://+48516505991">+48 516 505 991</a>
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="dc-modal-2" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+
                     <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
                     <p>
                         <strong>Ethnic indian wear</strong>
@@ -650,15 +703,17 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
 </section>
 
 <section id="eng-pics" class="section-padding">
+    <div class="container" style="padding: 50px 0 50px 0;">
+        <p class="vujahday-font" style="text-align: left;">Miejsce zaślubin</p>
+    </div>
     <div class="container">
         <div class="carousel" unique-script-id="w-w-dm-id">
             <div class="responsive-container-block bigContainer">
               <div class="responsive-container-block Container">
-                <div class="swiper my">
+                <div class="swiper mySwiper">
                   <div class="swiper-wrapper">
                     
                     <div class="swiper-slide">
@@ -700,6 +755,10 @@
           </div>
     </div>
 
+    <div style="display: flex; justify-content: center;">
+        <img src="img/flower4.png" style="width: 100px;" class="flower flower-4" alt="Flower">
+        <img src="img/flower4.png" style="width: 100px;" class="flower flower-5" alt="Flower">
+    </div>
     <div class="container">
         <div class="row hidden-lg hidden-md hidden-xs">
             <div class="col-xs-12 section-border section-padding"></div>
@@ -827,6 +886,14 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-input-group">
+                                <i class="fa fa-comments"></i>
+                                <textarea name="comments" id="comments" class="" placeholder="Uwagi" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
@@ -836,14 +903,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-input-group">
-                                <i class="fa fa-comments"></i>
-                                <textarea name="comments" id="comments" class="" placeholder="Uwagi" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>

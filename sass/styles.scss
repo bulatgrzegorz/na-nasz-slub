@@ -59,6 +59,9 @@ section .header {
 .section-padding {
   padding: $section-padding;
 }
+.no-section-padding {
+  
+}
 .section-border {
   border-bottom: 1px solid $keyline-color;
 }
@@ -178,7 +181,7 @@ Navigation
 ========================================================================== */
 .header-nav.open {
   visibility: visible;
-  opacity: 0.9;
+  opacity: 0.3;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -252,7 +255,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-min.png') center center;
+  background: url('https://res.cloudinary.com/dljcybafb/image/upload/v1741813268/slub/tmsguawyznme6iij2va8.png') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -406,7 +409,7 @@ Intro
 }
 
 #intro {
-  padding-top: 40px;
+  // padding-top: 40px;
   img {
     width: 100%;
     height: auto;
