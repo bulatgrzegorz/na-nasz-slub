@@ -247,7 +247,7 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         
-        if (MD5($('#invite_code').val()) !== '5a1e3a5aede16d438c38862cac1a78db') {
+        if (MD5($('#invite_code').val()) !== '4476b929e30dd0c4e8bdbcc82c6ba23a') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Oj!</strong> Wpisz poprawny kod z zaproszenia.'));
 
             return;
