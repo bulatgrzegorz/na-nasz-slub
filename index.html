@@ -313,26 +313,26 @@
 
 /* Adjust arrow size for smaller screens */
 @media screen and (max-width: 768px) {
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 16px; /* Slightly smaller arrow size on mobile */
+    .swiper-button-next.swiper-button-next::after,
+    .swiper-button-prev.swiper-button-prev::after {
+    font-size: 16px !important; /* Slightly smaller arrow size on mobile */
   }
 
-  .swiper-button-prev {
-    left: 5px; /* Adjust position if needed */
+  .swiper-button-prev.swiper-button-prev {
+    left: 5px !important;
   }
 
-  .swiper-button-next {
-    right: 5px; /* Adjust position if needed */
+  .swiper-button-next.swiper-button-next {
+    right: 5px !important;
   }
 }
 
 /* Adjust pagination dot size for smaller screens */
 @media screen and (max-width: 768px) {
-  .swiper-pagination-bullet {
-    width: 8px; /* Smaller dot width */
-    height: 8px; /* Smaller dot height */
-    margin: 0 4px; /* Adjust spacing */
+    .swiper-pagination-bullet.swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 4px !important;
   }
 }
 
