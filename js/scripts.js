@@ -206,6 +206,14 @@ $(document).ready(function () {
     var swiper = new Swiper('[unique-script-id="w-w-dm-id"] .mySwiper', {
         loop: true,
       
+        autoplay: {
+            delay: 3000, // 3000 milliseconds (3 seconds)
+            disableOnInteraction: false, // Allow manual swiping without stopping autoplay
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         pagination: {
           el: '[unique-script-id="w-w-dm-id"] .swiper-pagination',
           clickable: true,

@@ -281,6 +281,46 @@
   bottom: 5px;
   min-height: 20px;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffc107; /* Adjust color as needed */
+  opacity: 0.7; /* Make them slightly transparent */
+  transition: opacity 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #ffc107;
+  opacity: 1;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #ffc107;
+  font-size: 20px; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.swiper-button-prev {
+    color: #ffc107;
+  left: 10px; /* Adjust position as needed */
+}
+
+.swiper-button-next {
+    color: #ffc107;
+  right: 10px; /* Adjust position as needed */
+}
+.swiper-pagination-bullet {
+    --swiper-theme-color: #ffc107;
+  background: #ddd; /* Default inactive color, you can change this */
+  /* color: #ffc107; */
+  opacity: 1; /* Ensure they are fully visible */
+}
+
+.swiper-pagination-bullet-active {
+    /* color: #ffc107; */
+  background: #ffc107; /* Or your desired yellow color code */
+}
     </style>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -408,6 +448,8 @@
             <div class="responsive-container-block bigContainer">
               <div class="responsive-container-block Container">
                 <div class="swiper mySwiper">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                   <div class="swiper-wrapper">
                     
                     <div class="swiper-slide">
@@ -709,6 +751,8 @@
             <div class="responsive-container-block bigContainer">
               <div class="responsive-container-block Container">
                 <div class="swiper mySwiper">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                   <div class="swiper-wrapper">
                     
                     <div class="swiper-slide">
