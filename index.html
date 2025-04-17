@@ -310,6 +310,32 @@
     color: #ffc107;
   right: 10px; /* Adjust position as needed */
 }
+
+/* Adjust arrow size for smaller screens */
+@media screen and (max-width: 768px) {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px; /* Slightly smaller arrow size on mobile */
+  }
+
+  .swiper-button-prev {
+    left: 5px; /* Adjust position if needed */
+  }
+
+  .swiper-button-next {
+    right: 5px; /* Adjust position if needed */
+  }
+}
+
+/* Adjust pagination dot size for smaller screens */
+@media screen and (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 8px; /* Smaller dot width */
+    height: 8px; /* Smaller dot height */
+    margin: 0 4px; /* Adjust spacing */
+  }
+}
+
 .swiper-pagination-bullet {
     --swiper-theme-color: #ffc107;
   background: #ddd; /* Default inactive color, you can change this */
